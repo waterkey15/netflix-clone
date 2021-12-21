@@ -1,7 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link, useHistory } from 'react-router-dom'
+
 
 function Greeting() {
+    const history = useHistory();
+
+    const transferSignIn = () =>{
+        history.push('login')
+    }
+
+
     return (
         <Container>
                 <Fade >
@@ -18,7 +27,7 @@ function Greeting() {
                         <option value="english">English</option>
                         <option value="espanol">Espanol</option>
                     </select>
-                    <button>Sign In</button>
+                    <button onClick={transferSignIn}>Sign In</button>
                 </RightSide>
             </Header>
             <Body>
@@ -83,6 +92,9 @@ const Header = styled.div`
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 
 `
 
@@ -119,6 +131,7 @@ const RightSide = styled.div`
         font-weight: 400;
         border: none;
         width: 80px;
+        cursor:pointer;
 
     }
 `
@@ -189,6 +202,10 @@ const MailBox = styled.div`
         @media (max-width: 768px) {
             width: 20px;
             padding-left: 100px;
+            width: auto;
+            min-width: auto;
+            padding-left: auto;
+            width: 100%;
         }
 
     }
@@ -207,6 +224,7 @@ const MailBox = styled.div`
         color: white;
         @media (max-width: 768px) {
             width: 50%;
+            font-size: 1rem;
         }
     }
 `

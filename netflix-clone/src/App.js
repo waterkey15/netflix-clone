@@ -5,6 +5,7 @@ import Banner from './Banner';
 import Nav from './Nav';
 import Home from './components/Home';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import Login from './components/Login';
 
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/login">
+            <Login/>
+          </Route>
           <Route path="/home">
             <Nav/>
             <Banner/>

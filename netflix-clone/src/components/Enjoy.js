@@ -6,7 +6,7 @@ function Enjoy() {
         <Container>
             <LeftSide>
                 <h1>
-                    Enjoy your tv
+                    Enjoy on your tv
                 </h1>
                 <h2>
                     Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Bluray players, and more.
@@ -45,6 +45,10 @@ const RightSide = styled.div`
         height: auto;
         width: auto;
         flex: 0 0 120px;    
+        @media (max-width: 768px) {
+            width: 60vw;
+            margin-bottom: 40px;
+        }
     }
 
 
@@ -62,8 +66,10 @@ const LeftSide = styled.div`
         font-size: 3.125rem;
         line-height: 1.1;
         margin-bottom: 0.5rem;
+        text-align: center;
         @media (max-width: 768px) {
             margin-top: 50px;
+            font-size: 2.5rem;
         }
 
     }
@@ -75,8 +81,9 @@ const LeftSide = styled.div`
         margin-left: 80px;
         text-align: left;
         @media (max-width: 768px) {
-            margin-left: 0;
+            margin: 0 40px;
             text-align: center;
+            font-size: 1.325rem;
         }
     }
 `
